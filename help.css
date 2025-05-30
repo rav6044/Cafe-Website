@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2d2d2d;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #f2a900;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+main h1, main h2 {
+    color: #f2a900;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Help Overview */
+#help-overview {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#help-overview p {
+    text-align: center;
+}
+
+/* Ordering Help Section */
+#ordering-help {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#ordering-help ul {
+    padding-left: 1.5rem;
+}
+
+#ordering-help ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+#ordering-help ul li .btn {
+    display: inline-block;
+    background-color: #f2a900;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#ordering-help ul li .btn:hover {
+    background-color:#f2a900;
+}
+
+/* FAQ Section */
+#faq {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#faq .faq-item .btn{
+display: inline-block;
+    background-color: #f2a900;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+#faq .faq-item {
+    margin-bottom: 1rem;
+
+}
+#faq .faq-item .btn:hover{
+    background-color:#f2a900;
+}
+#faq h3 {
+    font-size: 1.2rem;
+    color: #f2a900;
+    margin-bottom: 0.5rem;
+}
+
+#faq p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Us Section */
+#contact-us {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact-us li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#contact-us a {
+    color: #f2a900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Feedback Section */
+#feedback {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#feedback .btn {
+    display: inline-block;
+    background-color: #f2a900;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#feedback .btn:hover {
+    background-color: #f2a900;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    #faq .faq-item {
+        margin-bottom: 1rem;
+    }
+
+    #feedback .btn {
+        padding: 0.75rem 1rem;
+    }
+}

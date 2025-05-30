@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Sweet Cafe</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <!-- Header and Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="web_design.html">Web Design</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Place Your Order</h1>
+        <p>Enjoy your favorite beverages and treats at Sweet Cafe! Use the form below to place your order for pickup or delivery.</p>
+
+        <!-- Order Form -->
+        <section id="order-form">
+            <form action="C:\Users\91805\node_modules\db_connection.js" method="POST">
+                <!-- Personal Information -->
+                <fieldset> 
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </fieldset>
+
+                <!-- Order Details -->
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <label for="menu-item">Select Item:</label>
+                    <select id="menu-item" name="menu_item" required>
+                        <option value="" disabled selected>Select a menu item</option>
+                        <option value="espresso">Espresso - $3.50</option>
+                        <option value="cappuccino">Cappuccino - $4.50</option>
+                        <option value="latte">Latte - $4.00</option>
+                        <option value="blueberry-muffin">Blueberry Muffin - $2.50</option>
+                        <option value="croissant">Croissant - $3.00</option>
+                        <option value="fruit-smoothie">Fruit Smoothie - $5.50</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                    <label for="special-requests">Special Requests:</label>
+                    <textarea id="special-requests" name="special_requests" placeholder="Any special instructions (e.g., extra sugar, no foam)"></textarea>
+                </fieldset>
+
+                <!-- Delivery or Pickup -->
+                <fieldset>
+                    <legend>Delivery Options</legend>
+                    <label>
+                        <input type="radio" name="delivery_option" value="pickup" checked>
+                        Pickup
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery_option" value="delivery">
+                        Delivery
+                    </label>
+
+                    <div id="delivery-address" style="display: none;">
+                        <label for="address">Delivery Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your delivery address">
+                    </div>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit" class="order-btn">Place Order</button>
+            </form>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="order-info">
+            <h2>How It Works</h2>
+            <h3>Placing an order at Sweet Cafe is simple:</h3>
+
+            <ol>
+                <li>Fill out your personal and order details in the form.</li>
+                <li>Select whether you'd like to pick up your order or have it delivered.</li>
+                <li>If choosing delivery, provide your delivery address.</li>
+                <li>Submit the form, and we'll confirm your order via email or phone!</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sweet Cafe. All rights reserved. | <a href="help.html">Need Help?</a></p>
+    </footer>
+
+    <!-- JavaScript for Delivery Address Toggle -->
+    <script>
+        document.querySelectorAll('input[name="delivery_option"]').forEach(option => {
+            option.addEventListener('change', function() {
+                const addressField = document.getElementById('delivery-address');
+                if (this.value === 'delivery') {
+                    addressField.style.display = 'block';
+                } else {
+                    addressField.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Sweet Cafe</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div id="main_container">
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="web_design.html">Web Design</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Feedback Section -->
+        <main>
+            <h1>We Value Your Feedback!</h1>
+            <p>Please let us know how we can improve your experience at Sweet Cafe.</p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Rating (1 to 5):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Your Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Tell us what you think..." rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">Submit Feedback</button>
+                </div>
+            </form>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Sweet Cafe | All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
